@@ -1,0 +1,11 @@
+__pycache__
+.env
+test_upload/*
+venv/*
+temp/*
+test*/*
+build/*
+
+.DS*
+token.pickle
+*.log
