@@ -20,10 +20,9 @@ def write_list_of_dict_to_csv(input_records:list, field_names:list, output_csv_f
 
 def prep_output_event(checklist):
     """Prep the event table
-
-    :param: checklist - list of dict, including project-event data returned by ebird
-
-    :return: 
+    
+    :param checklist: list - List of dict, including project-event returned by ebird. 
+    :return: list - List of one dict, with information about the checklist partly-parsed for an EMu event
     """
 
     event_out = {}
@@ -47,7 +46,8 @@ def prep_output_event(checklist):
 
 def prep_output_obs(checklist):
     """Prep the observation table
-    :param: checklist - list of dict, including observations returned by ebird
+    :param checklist: list - List of dict, including observations returned by ebird. 
+    :return: list - List of dict, with additional protocol and location info for each observation
     """
 
     checklist_out = []
@@ -66,7 +66,9 @@ def prep_output_obs(checklist):
 def get_ebird_checklist(checklist_id):
     """
     Retrieve the observations for a given checklist id
+
     :param: checklist_id str - A checklist submission i.d., e.g. "S196904601"
+    :return: 
     """
 
     ebird_key = config['EBIRD_API_KEY']
@@ -79,7 +81,7 @@ def get_ebird_checklist(checklist_id):
     
     if checklist_obs.status_code != 200:
 
-        return f"ERROR -- returned {checklist_obs.status_code} -- Confirm checklist ID {checkist_id}"
+        return f"ERROR -- returned {checklist_obs.status_code} -- Confirm checklist ID {checklist_id}"
     
     else:
 
