@@ -103,13 +103,13 @@ def main(checklist_id):
     write_list_of_dict_to_csv(
         input_records = checklist_event,
         field_names = checklist_event[0].keys(),
-        output_csv_file_name = f"{checklist_id}_event.csv"
+        output_csv_file_name = f"output/{checklist_id}_event.csv"
         )
 
     write_list_of_dict_to_csv(
         input_records = checklist_obs,
         field_names = checklist_obs[0].keys(),
-        output_csv_file_name = f"{checklist_id}_obs.csv"
+        output_csv_file_name = f"output/{checklist_id}_obs.csv"
         )
 
     
