@@ -5,7 +5,7 @@ A python script to retrieve more complete ebird checklist datasets, including ob
 These scripts require:
 - Downloading/Installing [python](https://www.python.org/downloads/)
 - Installing required python packages listed in [requirements.txt](requirements.txt)
-  - In terminal/shell, install requirements by pasting this command: `pip -m install requirements.txt`
+  - In terminal/shell, install requirements by pasting this command: `pip install -r requirements.txt`
 
 ## How to setup:
 
